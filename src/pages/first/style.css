@@ -1,0 +1,59 @@
+.container .bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8.81rem;
+  background: url("../../assets/img/index/bg_pic_wuxing.png") no-repeat;
+  background-size: 7.5rem 8.81rem;
+}
+.container .cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+.container .cover .circle {
+  position: absolute;
+  height: 2.64rem;
+  width: 2.64rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 1.06rem;
+  left: 2.43rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .cover .circle img {
+  width: 2.28rem;
+  height: 0.84rem;
+}
+.container .cover .circle:first-child {
+  transform: translateX(-0.13rem);
+}
+.container .cover .circle:last-child {
+  transform: translateX(0.13rem);
+}
+.container .bottom-bg {
+  position: fixed;
+  background: url("../../assets/img/index/bg_scan.png") no-repeat;
+  bottom: 0.96rem;
+  left: 0;
+  right: 0;
+  height: 5.2rem;
+  background-size: 7.5rem 5.2rem;
+  z-index: 1;
+}
+.container .bottom-bg .scan {
+  width: 3rem;
+  height: 3rem;
+  background: -webkit-linear-gradient(top, #fdaf31, #ff7e34);
+  border-radius: 50%;
+  position: absolute;
+  top: 1.16rem;
+  left: 2.25rem;
+  box-shadow: 0 0 0.8rem 0rem #fdaf31;
+}

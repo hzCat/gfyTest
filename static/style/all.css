@@ -13,8 +13,17 @@ ol,
 img {
   box-sizing: border-box;
 }
+ul,
+li,
+ol {
+  list-style: none;
+}
 body {
-  background: #dbdbdb;
+  background: #f6f6f6;
+}
+.container {
+  width: 100%;
+  padding-bottom: 0.96rem;
 }
 .tabbar {
   position: fixed;
@@ -23,10 +32,10 @@ body {
   right: 0;
   width: 100%;
   border-top: 1px solid #ddd;
-  height: 4.8rem;
+  height: 0.96rem;
   background: #fff;
   z-index: 1000;
-  font-size: 0.8rem;
+  font-size: 0.16rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -38,6 +47,9 @@ body {
   align-items: center;
 }
 .tabbar .one img {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 0.48rem;
+  height: 0.48rem;
+}
+.tabbar .selected {
+  color: #fdaf31;
 }

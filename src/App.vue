@@ -4,11 +4,11 @@
     <div class="tabbar">
       <div class="one" @click="first">
         <img :src="path1" alt="">
-        <span>首页</span>
+        <span :class='[(nowTabBar=="first")&&"selected"]'>首页</span>
       </div>
       <div class="one" @click="center">
         <img :src="path2" alt="">
-        <span>
+        <span :class='[(nowTabBar=="center")&&"selected"]'>
           个人中心
         </span>
       </div>
@@ -22,21 +22,25 @@ export default {
 
   data: function() {
     return {
-      path1: "./../static/tabbar/icon_home_n.png",
+      nowTabBar:'first',
+      path1: "./../static/tabbar/icon_home_selected.png",
       path2: "./../static/tabbar/icon_persionalCerter.png"
     };
   },
+
   methods: {
     first() {
       if(this.path1=="./../static/tabbar/icon_home_n.png"){
         this.path1="././../static/tabbar/icon_home_selected.png"
         this.path2="./../static/tabbar/icon_persionalCerter.png"
+        this.nowTabBar='first'
       }
     },
     center() {
       if(this.path2=="./../static/tabbar/icon_persionalCerter.png"){
         this.path2="././../static/tabbar/icon_persionalCerter-selected.png"
         this.path1="./../static/tabbar/icon_home_n.png"
+        this.nowTabBar='center'
       }
     }
   }
