@@ -9,7 +9,7 @@
       <div class="circle"></div>
     </div>
     <div class="bottom-bg">
-      <div class="scan">
+      <div class="scan" @click="scanClick">
         <div class="title">
           <img src="../../assets/img/index/icon_scan.png">
         </div>
@@ -20,11 +20,21 @@
 </template>
 
 <script>
-  import "./style.css";
-  export default {
-    data: function () {
-      return {};
+import "./style.css";
+export default {
+  data: function() {
+    return {};
+  },
+  methods: {
+    scanClick() {
+      let that=this;
+      that.axios.get("https://jsonplaceholder.typicode.com/posts/20").then(res => {
+        console.log(res);
+      });
+      this.$http.get("https://jsonplaceholder.typicode.com/posts/20").then(res => {
+        console.log(res);
+      });
     }
-  };
-
+  }
+};
 </script>
